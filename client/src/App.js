@@ -3,15 +3,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AppNavbar from './components/AppNavbar';
 import ShoppingList from './components/ShoppingList';
+import { Provider } from 'react-redux';
+import store from './store';
+import ItemModal from './components/ItemModal';
+import { Container } from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      <AppNavbar/>
-      <ShoppingList/>
-        <h1>it works</h1>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+        <AppNavbar/>
+        <Container>
+          <ItemModal />
+          <ShoppingList/>
+        </Container>
+          <h1>it works</h1>
+        </div>
+      </Provider>
     );
   }
 }
