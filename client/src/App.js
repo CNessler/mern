@@ -7,12 +7,16 @@ import { Provider } from 'react-redux';
 import store from './store';
 import ItemModal from './components/ItemModal';
 import { Container } from 'reactstrap';
+import Background from './components/Background';
+import NavLinks from './components/NavLinks';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <div className="App">
+        <Background></Background>
+        <NavLinks />
         <AppNavbar/>
         <Container>
           <ItemModal />
