@@ -26,7 +26,7 @@ class NavLinks extends Component {
     }
 
     rsvp() {
-        this.setState({rsvp: true});
+        this.setState({rsvp: true, journey: false});
         var view = document.getElementById('nav');
         view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container,Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container,Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import { addRsvp } from '../actions/rsvpAction';
 import { connect } from 'react-redux';
 
@@ -37,50 +37,58 @@ class Rsvp extends Component {
 
     render() {
         return(
-            <div>
                 <Container>
                     <Form onSubmit={this.onSubmit}>
-                        <FormGroup>
-                            <Label for="item">Name</Label>
-                            <Input
-                                type="text"
-                                name="name"
-                                id="guest"
-                                placeholder="Add guest"
-                                onChange={this.onChange}
-                            ></Input>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label check>
-                                <Input type="radio" 
-                                       name="attending" 
-                                       value="yes" 
-                                       checked={this.state.attending === "yes"} 
-                                       onChange={this.handleRadioChange}/>
-                                Wouldn't Miss It For The World
-                            </Label>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label check>
-                                <Input type="radio" 
-                                       name="attending"
-                                       value="no" 
-                                       checked={this.state.attending === "no"} 
-                                       onChange={this.handleRadioChange}/>
-                                I'll Celebrate From Afar
-                            </Label>
-                        </FormGroup>
-                        <FormGroup>
-                            <Button
-                                color="light"
-                                style={{marginTop: '2rem'}}
-                                block
-                            >Cheers!
-                            </Button>
-                        </FormGroup>
+                        <Row>
+                            <Col sm="12" md={{ size: 6, offset: 3 }}>
+                                <FormGroup>
+                                    <Label for="item">Name</Label>
+                                    <Input
+                                        type="text"
+                                        name="name"
+                                        id="guest"
+                                        placeholder="Add guest"
+                                        onChange={this.onChange}
+                                    ></Input>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" md={{ size: 6, offset: 3 }}>
+                                <FormGroup check inline>
+                                    <Label check>
+                                        <Input type="radio" 
+                                            name="attending" 
+                                            value="yes" 
+                                            checked={this.state.attending === "yes"} 
+                                            onChange={this.handleRadioChange}/>
+                                        Wouldn't Miss It For The World
+                                    </Label>
+                                    <Label check>
+                                        <Input type="radio" 
+                                            name="attending"
+                                            value="no" 
+                                            checked={this.state.attending === "no"} 
+                                            onChange={this.handleRadioChange}/>
+                                        I'll Celebrate From Afar
+                                    </Label>
+                                </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" md={{ size: 6, offset: 3 }}>
+                                <FormGroup>
+                                    <Button
+                                        color="light"
+                                        style={{marginTop: '2rem'}}
+                                        block
+                                    >Cheers!
+                                    </Button>
+                                </FormGroup>
+                            </Col>
+                        </Row>
                     </Form>
                 </Container>
-            </div>
         )
     }
 }
