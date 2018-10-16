@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Reservation from './Reservation';
+import Rsvp from './Rsvp';
+import Journey from './Journey';
 
 class NavLinks extends Component {
 
@@ -25,15 +26,17 @@ class NavLinks extends Component {
     }
 
     rsvp() {
-        this.setState({info: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."});
+        this.setState({rsvp: true});
         var view = document.getElementById('nav');
         view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
     render() {
         let data;
-        if(this.state.journey === true) {
-            data = <Reservation/>;
+        if(this.state.rsvp === true) {
+            data = <Rsvp/>;
+        } else if(this.state.journey === true) {
+            data = <Journey/>;
         }
         return (
             <div className="container">

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const items = require('./routes/api/items');
+const rsvps = require('./routes/api/rsvps');
 
 const app = express();
 
@@ -19,6 +20,7 @@ mongoose.connect(db)
 
 // Use Routes
 app.use('/api/items', items);
+app.use('/api/rsvps', rsvps);
 
 const port = process.env.PORT || 5000;
 
