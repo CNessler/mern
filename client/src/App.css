@@ -20,6 +20,18 @@
     transition: opacity 1000ms ease-in;
 }
 
+#rsvpForm {
+    padding-top: 3rem;
+}
+
+#container {
+    background-color: beige;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -65,16 +77,21 @@ div#wrapperHeader {
    div#nav {
      padding: 15px;
      font-size: 20px;
-     color: #267129;
+     color: #f5f1e4;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    }
   
    .btn{
-     color:#267129;
+     color:#192028;
+     outline-color: #f5f1e4;
+   }
+
+   .btn-secondary {
+       background-color: #f5f1e4;
    }
   
    #nav-btn:hover {
-     background-color: #267129;
+     background-color: #f5f1e4;
    }
   
    #addGuest {

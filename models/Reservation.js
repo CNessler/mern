@@ -11,6 +11,12 @@ const ReservationSchema = new Schema({
     attending: {
         type: Boolean,
         required: true
+    },
+    songOne: {
+        type: String
+    },
+    songTwo: {
+        type: String
     }
 });
 

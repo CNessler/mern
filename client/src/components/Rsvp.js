@@ -9,9 +9,24 @@ class Rsvp extends Component {
         super();
 
         this.state = {
-            attending : true
+            attending : "yes",
+            name: "",
+            songOne: "",
+            songTwo: ""
         }
+
+        this.clear = this.clear.bind(this);
     }
+
+    clear = () => { 
+        this.setState({
+            name: "",
+            attending: "",
+            songOne: "",
+            songTwo: ""
+          });
+          console.log(this.state.name);
+      }
 
     onChange = (e) => {
         this.setState({ [e.target.name] : e.target.value })
@@ -22,11 +37,13 @@ class Rsvp extends Component {
 
         const rsvp = {
             name: this.state.name,
-            attending: this.state.attending
+            attending: this.state.attending,
+            songOne: this.state.songOne,
+            songTwo: this.state.songTwo
         }
 
         // Add rsvp via addRsvp action
-        this.props.addRsvp(rsvp)
+        this.props.addRsvp(rsvp);
     }
 
     handleRadioChange = (e) => {
@@ -37,16 +54,17 @@ class Rsvp extends Component {
 
     render() {
         return(
-                <Container>
-                    <Form onSubmit={this.onSubmit}>
+                <Container id="container">
+                    <Form onSubmit={this.onSubmit} id="rsvpForm">
                         <Row>
-                            <Col sm="12" md={{ size: 6, offset: 3 }}>
+                            <Col sm="12" md={{ size: 4, offset: 4 }}>
                                 <FormGroup>
                                     <Label for="item">Name</Label>
                                     <Input
                                         type="text"
                                         name="name"
                                         id="guest"
+                                        value={this.state.name}
                                         placeholder="Add guest"
                                         onChange={this.onChange}
                                     ></Input>
@@ -54,8 +72,9 @@ class Rsvp extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm="12" md={{ size: 6, offset: 3 }}>
-                                <FormGroup check inline>
+                            <Col sm="12" md={{ size: 4, offset: 4 }}>
+                            <FormGroup tag="fieldset">
+                                <FormGroup check>
                                     <Label check>
                                         <Input type="radio" 
                                             name="attending" 
@@ -64,24 +83,53 @@ class Rsvp extends Component {
                                             onChange={this.handleRadioChange}/>
                                         Wouldn't Miss It For The World
                                     </Label>
+                                </FormGroup>
+                                <FormGroup check>
                                     <Label check>
                                         <Input type="radio" 
                                             name="attending"
-                                            value="no" 
+                                            value="no"
                                             checked={this.state.attending === "no"} 
                                             onChange={this.handleRadioChange}/>
                                         I'll Celebrate From Afar
                                     </Label>
                                 </FormGroup>
+                            </FormGroup>
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm="12" md={{ size: 6, offset: 3 }}>
+                            <Col sm="12" md={{ size: 4, offset: 4 }}>
+                            <FormGroup tag="fieldset">
+                                <Label for="item">Favorite Dancing Songs</Label>
+                                    <Input
+                                        type="text"
+                                        name="songOne"
+                                        id="songOne"
+                                        value={this.state.songOne}
+                                        placeholder="Song One"
+                                        onChange={this.onChange}
+                                    ></Input>
+                            </FormGroup>
+                            <FormGroup>
+                                    <Input
+                                        type="text"
+                                        name="songTwo"
+                                        id="songTwo"
+                                        value={this.state.songTwo}
+                                        placeholder="Song Two"
+                                        onChange={this.onChange}
+                                    ></Input>
+                            </FormGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" md={{ size: 4, offset: 4 }}>
                                 <FormGroup>
                                     <Button
                                         color="light"
                                         style={{marginTop: '2rem'}}
                                         block
+                                        onClick={this.clear}
                                     >Cheers!
                                     </Button>
                                 </FormGroup>

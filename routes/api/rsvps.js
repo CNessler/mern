@@ -21,7 +21,9 @@ router.get('/', function(req, res){
 router.post('/', function(req, res){
   const newReservation = new Reservation({
       name: req.body.name,
-      attending: req.body.attending
+      attending: req.body.attending,
+      songOne: req.body.songOne,
+      songTwo: req.body.songTwo
   });
 
   newReservation.save().then(function(rsvp) {

@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import Rsvp from './Rsvp';
 import Journey from './Journey';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Container,
+    Button
+} from 'reactstrap';
 
 class NavLinks extends Component {
-
+    toggle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
     constructor(props) {
         super(props);
-        this.state = {info: "", journey:false};
+        this.state = {info: "", journey:false, isOpen: false};
         // This binding is necessary to make `this` work in the callback
         this.details = this.details.bind(this);
         this.journey = this.journey.bind(this);
         this.rsvp = this.rsvp.bind(this);
+        
       }
       
     details() {
@@ -27,7 +43,7 @@ class NavLinks extends Component {
 
     rsvp() {
         this.setState({rsvp: true, journey: false});
-        var view = document.getElementById('nav');
+        var view = document.getElementById('workPlease');
         view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
@@ -39,21 +55,28 @@ class NavLinks extends Component {
             data = <Journey/>;
         }
         return (
-            <div className="container">
-                <div className="row">
-                    <div id="nav" className="col-md-4 text-center">
-                        <button id="nav-btn" onClick={this.details} type="button" className="btn btn-outline-success">The Deets</button>
-                    </div>
-                    <div id="nav" className="col-md-4 text-center">
-                        <button id="nav-btn" onClick={this.journey} type="button" className="btn btn-outline-success">Our Journey</button>
-                    </div>
-                    <div id="nav" className="col-md-4 text-center">
-                        <button id="nav-btn" onClick={this.rsvp} type="button" className="btn btn-outline-success">RSVP</button></div>
-                </div>
-                <div className="row">
+            <div>
+                <Navbar color="dark" expand="sm">
+                    <Container id="workPlease">
+                        <NavbarToggler onClick={this.toggle} />
+                        <Collapse isOpen={this.state.isOpen} navbar>
+                            <Nav navbar className="col-md-12">
+                                <NavItem className="col-md-4 text-center">
+                                    <Button id="nav-btn" className="btn" onClick={this.details}>The Deets</Button>
+                                </NavItem>
+                                <NavItem className="col-md-4 text-center">
+                                    <Button id="nav-btn" className="btn" onClick={this.journey}>Our Journey</Button>
+                                </NavItem>
+                                <NavItem className="col-md-4 text-center">
+                                    <Button id="nav-btn" className="btns" onClick={this.rsvp}>RSVP</Button>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Container>
+                </Navbar>
+                <Container>
                     {data}
-                    <div>{this.state.info}</div>
-                </div>
+                </Container>
             </div>
         )
     }
