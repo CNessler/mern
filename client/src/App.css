@@ -20,12 +20,20 @@
     transition: opacity 1000ms ease-in;
 }
 
+body {
+    /* background-color:#CEB992; */
+}
+
+li.nav-item.active {
+    background-color: blue;
+}
+
 #rsvpForm {
     padding-top: 3rem;
 }
 
-#container {
-    background-color: beige;
+.container {
+    /* background-color: #73937E; */
 }
 
 .jumbotron {
@@ -36,43 +44,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    color:#B8D0EB;
   }
-
-div#wrapperHeader {
-    background-image: url('./images/photo.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height:auto;
-    max-width: 100%;
-}
 
 .img-journey {
     text-align: center;
 }
-   /* @media (min-width: 480px) {
-    div#wrapperHeader { height: 300px; width: 580px;}
-    .title { height:50px; width: 100px;  margin-top: 20px; padding-left: 0px;}
-    }
-
-    @media (min-width: 300px) {
-        div#wrapperHeader { height: 150px; width: 380px;}
-        .title { height:50px; width: 100px; margin-top: 20px; margin-left: 30px;}
-        }
-
-    @media (min-width: 768px) {
-        div#wrapperHeader { height: 400px; width: 768px;}
-        .title { height:400px; width: 500px; padding: 100px; padding-left: 100px;}
-    }
-
-    @media (min-width: 992px) {
-        div#wrapperHeader { height: 675px; width: 100%;}
-        .title { height:500px; width:680px; padding: 100px; padding-left: 200px;}
-    } */
-   
-   /* .title {
-     padding: 100px;
-     padding-left: 200px;
-   } */
   
    div#nav {
      padding: 15px;
@@ -81,7 +58,7 @@ div#wrapperHeader {
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    }
   
-   .btn{
+   /* .btn{
      color:#192028;
      outline-color: #f5f1e4;
    }
@@ -92,7 +69,7 @@ div#wrapperHeader {
   
    #nav-btn:hover {
      background-color: #f5f1e4;
-   }
+   } */
   
    #addGuest {
     cursor: pointer;

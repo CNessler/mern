@@ -19,6 +19,7 @@ class NavLinks extends Component {
             isOpen: !this.state.isOpen
         })
     }
+    
     constructor(props) {
         super(props);
         this.state = {info: "", journey:false, isOpen: false};
@@ -26,25 +27,21 @@ class NavLinks extends Component {
         this.details = this.details.bind(this);
         this.journey = this.journey.bind(this);
         this.rsvp = this.rsvp.bind(this);
-        
       }
       
     details() {
         this.setState({info : "apple", journey:false});
-        var view = document.getElementById('nav');
-        view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        // document.getElementById(e.target.id).setAttribute("style", "background-color:red");
     }
 
     journey() {
         this.setState({journey: true});
-        var view = document.getElementById('nav');
-        view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
     rsvp() {
         this.setState({rsvp: true, journey: false});
-        var view = document.getElementById('workPlease');
-        view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        // var view = document.getElementById('workPlease');
+        // view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     }
 
     render() {
@@ -62,13 +59,13 @@ class NavLinks extends Component {
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav navbar className="col-md-12">
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btn" onClick={this.details}>The Deets</Button>
+                                    <Button id="nav-btn deets" className="btn" role="button" onClick={this.details}>The Deets</Button>
                                 </NavItem>
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btn" onClick={this.journey}>Our Journey</Button>
+                                    <Button id="nav-btn" className="btn" role="button" onClick={this.journey}>Our Journey</Button>
                                 </NavItem>
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btns" onClick={this.rsvp}>RSVP</Button>
+                                    <Button id="nav-btn" className="btn active" onClick={this.rsvp}>RSVP</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
