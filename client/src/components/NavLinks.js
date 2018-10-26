@@ -22,50 +22,36 @@ class NavLinks extends Component {
     
     constructor(props) {
         super(props);
-        this.state = {info: "", journey:false, isOpen: false};
+        this.state = {option:"", isOpen: false, activeItem: ""};
         // This binding is necessary to make `this` work in the callback
-        this.details = this.details.bind(this);
-        this.journey = this.journey.bind(this);
-        this.rsvp = this.rsvp.bind(this);
       }
-      
-    details() {
-        this.setState({info : "apple", journey:false});
-        // document.getElementById(e.target.id).setAttribute("style", "background-color:red");
-    }
 
-    journey() {
-        this.setState({journey: true});
-    }
-
-    rsvp() {
-        this.setState({rsvp: true, journey: false});
-        // var view = document.getElementById('workPlease');
-        // view.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    changeState(num, option) {
+        this.setState({option: option, active: num});
     }
 
     render() {
         let data;
-        if(this.state.rsvp === true) {
+        if(this.state.option === "rsvp") {
             data = <Rsvp/>;
-        } else if(this.state.journey === true) {
+        } else if(this.state.option === "journey") {
             data = <Journey/>;
         }
         return (
             <div>
-                <Navbar color="dark" expand="sm">
+                <Navbar color="" expand="sm">
                     <Container id="workPlease">
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav navbar className="col-md-12">
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn deets" className="btn" role="button" onClick={this.details}>The Deets</Button>
+                                    <Button id="nav-btn deets" className="btn" role="button" onClick={() =>this.changeState(1, "deets")} active={this.state.active === 1}>The Deets</Button>
                                 </NavItem>
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btn" role="button" onClick={this.journey}>Our Journey</Button>
+                                    <Button id="nav-btn" className="btn" role="button" onClick={() =>this.changeState(2, "journey")} active={this.state.active === 2}>Our Journey</Button>
                                 </NavItem>
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btn active" onClick={this.rsvp}>RSVP</Button>
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "rsvp")} active={this.state.active === 3}>RSVP</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>

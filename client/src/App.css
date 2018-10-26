@@ -57,19 +57,29 @@ body {
      color: #f5f1e4;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    }
+   .btn.btn.btn-secondary.active {
+       background-color: white;
+       border-bottom-color: greenyellow;
+       border-bottom-width: 3px;
+       border-top-color: white;
+       border-left-color: white;
+       border-right-color: white;
+       color:black;
+       box-shadow: none !important;
+   }
   
-   /* .btn{
-     color:#192028;
-     outline-color: #f5f1e4;
+  .btn{
+     color:black;
+     border-color: white;
    }
 
    .btn-secondary {
-       background-color: #f5f1e4;
+       background-color: white;
    }
   
-   #nav-btn:hover {
+   /* #nav-btn:hover {
      background-color: #f5f1e4;
-   } */
+   } */ */
   
    #addGuest {
     cursor: pointer;
