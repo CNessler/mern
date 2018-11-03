@@ -1,8 +1,7 @@
 import { GET_RSVPS, ADD_RSVP } from '../actions/rsvpTypes';
 
 const initialState = {
-    rsvps: [],
-    loading: false
+    rsvp: []
 }
 
 export default function(state = initialState, action) {
@@ -10,13 +9,12 @@ export default function(state = initialState, action) {
         case GET_RSVPS:
             return {
                 ...state,
-                rsvp: action.payload,
-                loading: false
+                rsvp: action.payload
             }
         case ADD_RSVP:
             return {
                 ...state,
-                rsvp: [action.payload, ...state.rsvps]
+                rsvp: [action.payload, ...state.rsvp]
             }
         default:
             return state;

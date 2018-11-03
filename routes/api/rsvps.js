@@ -19,6 +19,7 @@ router.get('/', function(req, res){
 // @desc   Create a Reservation
 // @access Public
 router.post('/', function(req, res){
+    console.log("backend");
   const newReservation = new Reservation({
       name: req.body.name,
       attending: req.body.attending,
@@ -28,7 +29,7 @@ router.post('/', function(req, res){
 
   newReservation.save().then(function(rsvp) {
       res.json(rsvp)
-  });
+      });
 });
 
 

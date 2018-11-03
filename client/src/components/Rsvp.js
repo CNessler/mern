@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container,Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import { addRsvp } from '../actions/rsvpAction';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Rsvp extends Component {
 
@@ -19,13 +20,12 @@ class Rsvp extends Component {
     }
 
     clear = () => { 
-        this.setState({
-            name: "",
-            attending: "",
-            songOne: "",
-            songTwo: ""
-          });
-          console.log(this.state.name);
+        // this.setState({
+        //     name: "",
+        //     attending: "",
+        //     songOne: "",
+        //     songTwo: ""
+        //   });
       }
 
     onChange = (e) => {
@@ -41,7 +41,7 @@ class Rsvp extends Component {
             songOne: this.state.songOne,
             songTwo: this.state.songTwo
         }
-
+        console.log("RSVP" + rsvp);
         // Add rsvp via addRsvp action
         this.props.addRsvp(rsvp);
     }
@@ -53,6 +53,8 @@ class Rsvp extends Component {
     }
 
     render() {
+        console.log(this.props.rsvp);
+        console.log(this.state);
         return(
                 <Container id="container">
                     <Form onSubmit={this.onSubmit} id="rsvpForm">
@@ -140,6 +142,11 @@ class Rsvp extends Component {
         )
     }
 }
+
+// Rsvp.propTypes = {
+//     rsvp: PropTypes.object.isRequired,
+//     addRsvp: PropTypes.func.isRequired
+// }
 
 const mapStateToProps = state => ({
     rsvp: state.rsvp
