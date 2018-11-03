@@ -19,17 +19,19 @@ router.get('/', function(req, res){
 // @desc   Create a Reservation
 // @access Public
 router.post('/', function(req, res){
-    console.log("REQUEST**************");
   const newReservation = new Reservation({
       name: req.body.name,
       attending: req.body.attending,
       songOne: req.body.songOne,
       songTwo: req.body.songTwo
   });
-
-  newReservation.save().then(function(rsvp) {
-      res.json(rsvp)
-  });
+  if(newReservation !== null) {
+    newReservation.save().then(function(rsvp) {
+        res.json(rsvp)
+    });
+  } else {
+      return res.json(rsvp);
+  }
 });
 
 

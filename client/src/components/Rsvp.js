@@ -40,9 +40,12 @@ class Rsvp extends Component {
             songOne: this.state.songOne,
             songTwo: this.state.songTwo
         }
-        console.log("RSVP");
         // Add rsvp via addRsvp action
         this.props.addRsvp(rsvp);
+        const test = this.props.rsvp.rsvp;
+        if(test) {
+            test.map((rsvp) => console.log(rsvp.attending));
+        }
     }
 
     handleRadioChange = (e) => {
@@ -52,8 +55,18 @@ class Rsvp extends Component {
     }
 
     render() {
+        const test = this.props.rsvp.rsvp;
+       let response;
+        if(test) {
+            test.map((rsvp) => 
+            response = rsvp.attending === true ? "SUCCESS" : "ERROR");
+            
+        }
+        console.log(response);
         return(
+                
                 <Container id="container">
+                {response}
                     <Form onSubmit={this.onSubmit} id="rsvpForm">
                         <Row>
                             <Col sm="12" md={{ size: 4, offset: 4 }}>
