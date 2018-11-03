@@ -19,6 +19,7 @@ router.get('/', function(req, res){
 // @desc   Create a Reservation
 // @access Public
 router.post('/', function(req, res){
+    console.log("REQUEST**************");
   const newReservation = new Reservation({
       name: req.body.name,
       attending: req.body.attending,

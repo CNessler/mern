@@ -15,18 +15,17 @@ class Rsvp extends Component {
             songTwo: ""
         }
 
-        this.clear = this.clear.bind(this);
+        // this.clear = this.clear.bind(this);
     }
 
-    clear = () => { 
-        this.setState({
-            name: "",
-            attending: "",
-            songOne: "",
-            songTwo: ""
-          });
-          console.log(this.state.name);
-      }
+    // clear = () => { 
+    //     this.setState({
+    //         name: "",
+    //         attending: "",
+    //         songOne: "",
+    //         songTwo: ""
+    //       });
+    //   }
 
     onChange = (e) => {
         this.setState({ [e.target.name] : e.target.value })
@@ -41,7 +40,7 @@ class Rsvp extends Component {
             songOne: this.state.songOne,
             songTwo: this.state.songTwo
         }
-
+        console.log("RSVP");
         // Add rsvp via addRsvp action
         this.props.addRsvp(rsvp);
     }
