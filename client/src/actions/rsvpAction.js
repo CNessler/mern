@@ -1,4 +1,4 @@
-import { GET_RSVPS, ADD_RSVP } from './rsvpTypes';
+import { GET_RSVPS, ADD_RSVP, RESET_STORE } from './rsvpTypes';
 import axios from 'axios';
 
 export const addRsvp = (rsvp) => dispatch => {
@@ -10,4 +10,10 @@ export const addRsvp = (rsvp) => dispatch => {
                 payload: res.data
             })
         )
+}
+
+export const resetStore = () => dispatch => {
+    dispatch({
+        type: RESET_STORE,
+    })
 }

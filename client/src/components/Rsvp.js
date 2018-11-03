@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Container,Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import { addRsvp } from '../actions/rsvpAction';
+import { resetStore } from '../actions/rsvpAction';
 import { connect } from 'react-redux';
+import Success from './Success';
+import OtherPlans from './OtherPlans';
 
 class Rsvp extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             attending : "yes",
@@ -14,18 +17,8 @@ class Rsvp extends Component {
             songOne: "",
             songTwo: ""
         }
-
-        // this.clear = this.clear.bind(this);
+        this.props.resetStore();
     }
-
-    // clear = () => { 
-    //     this.setState({
-    //         name: "",
-    //         attending: "",
-    //         songOne: "",
-    //         songTwo: ""
-    //       });
-    //   }
 
     onChange = (e) => {
         this.setState({ [e.target.name] : e.target.value })
@@ -42,10 +35,12 @@ class Rsvp extends Component {
         }
         // Add rsvp via addRsvp action
         this.props.addRsvp(rsvp);
-        const test = this.props.rsvp.rsvp;
-        if(test) {
-            test.map((rsvp) => console.log(rsvp.attending));
-        }
+        this.setState({
+                    name: "",
+                    attending: "",
+                    songOne: "",
+                    songTwo: ""
+                  });
     }
 
     handleRadioChange = (e) => {
@@ -56,17 +51,17 @@ class Rsvp extends Component {
 
     render() {
         const test = this.props.rsvp.rsvp;
-       let response;
+        let response;
+        let error = "There was an error saving your RSVP. Please try again or contact one of the brides.";;
         if(test) {
             test.map((rsvp) => 
-            response = rsvp.attending === true ? "SUCCESS" : "ERROR");
+            response = rsvp.attending === true ? <Success/> : <OtherPlans/>);
             
         }
-        console.log(response);
         return(
                 
                 <Container id="container">
-                {response}
+                    {response}
                     <Form onSubmit={this.onSubmit} id="rsvpForm">
                         <Row>
                             <Col sm="12" md={{ size: 4, offset: 4 }}>
@@ -138,10 +133,8 @@ class Rsvp extends Component {
                             <Col sm="12" md={{ size: 4, offset: 4 }}>
                                 <FormGroup>
                                     <Button
-                                        color="light"
                                         style={{marginTop: '2rem'}}
                                         block
-                                        onClick={this.clear}
                                     >Cheers!
                                     </Button>
                                 </FormGroup>
@@ -157,4 +150,4 @@ const mapStateToProps = state => ({
     rsvp: state.rsvp
 })
 
-export default connect(mapStateToProps, { addRsvp })(Rsvp);
+export default connect(mapStateToProps, { addRsvp, resetStore })(Rsvp);

@@ -20,10 +20,9 @@ class NavLinks extends Component {
         })
     }
     
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {option:"", isOpen: false, activeItem: ""};
-        // This binding is necessary to make `this` work in the callback
       }
 
     changeState(num, option) {

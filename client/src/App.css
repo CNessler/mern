@@ -3,6 +3,8 @@
 }
 
 .fade-enter {
+    margin: 0 auto;
+    width: 60%;
     opacity: 0.01;
 }
 
@@ -18,6 +20,34 @@
 .fade-exit-active {
     opacity: 0.01;
     transition: opacity 1000ms ease-in;
+}
+
+.success {
+    background: #46E34D;
+    -webkit-animation: fadeinout 8s linear forwards;
+    animation: fadeinout 8s linear forwards;
+    opacity: 0;
+    color:black;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.otherPlans {
+    background: brown;
+    -webkit-animation: fadeinout 8s linear forwards;
+    animation: fadeinout 8s linear forwards;
+    opacity: 0;
+    color:black;
+    text-align: center;
+    border-radius: 8px;
+}
+
+@-webkit-keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  50% { opacity: 1; }
 }
 
 body {
@@ -44,38 +74,49 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    color:#B8D0EB;
+    color: black;
   }
 
 .img-journey {
     text-align: center;
 }
   
-   div#nav {
-     padding: 15px;
-     font-size: 20px;
-     color: #f5f1e4;
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   }
-   .btn.btn.btn-secondary.active {
-       background-color: white;
-       border-bottom-color: greenyellow;
-       border-bottom-width: 3px;
-       border-top-color: white;
-       border-left-color: white;
-       border-right-color: white;
-       color:black;
-       box-shadow: none !important;
-   }
-  
-  .btn{
-     color:black;
-     border-color: white;
-   }
+div#nav {
+    padding: 15px;
+    font-size: 20px;
+    color: #f5f1e4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn.btn.btn-secondary.active {
+    background-color: white;
+    border-bottom-color: #46E34D;
+    border-bottom-width: 3px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    color:black;
+    box-shadow: none !important;
+}
 
-   .btn-secondary {
-       background-color: white;
-   }
+  
+.btn{
+    color:black;
+    border-color: white;
+}
+
+.btn:hover {
+    background-color: #46E34D;
+    transition-delay: 2s ease-in;
+    opacity:1;
+    border:none;
+
+}
+
+
+
+.btn-secondary {
+    background-color: white;
+}
   
    /* #nav-btn:hover {
      background-color: #f5f1e4;

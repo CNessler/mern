@@ -1,4 +1,4 @@
-import { GET_RSVPS, ADD_RSVP } from '../actions/rsvpTypes';
+import { GET_RSVPS, ADD_RSVP, RESET_STORE } from '../actions/rsvpTypes';
 
 const initialState = {
     rsvps: [],
@@ -18,6 +18,9 @@ export default function(state = initialState, action) {
                 ...state,
                 rsvp: [action.payload, ...state.rsvps]
             }
+        case RESET_STORE: {
+            state = initialState
+        }
         default:
             return state;
     }
