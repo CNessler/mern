@@ -12,6 +12,7 @@ import {
     Container,
     Button
 } from 'reactstrap';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class NavLinks extends Component {
     toggle = () => {
@@ -27,6 +28,7 @@ class NavLinks extends Component {
 
     changeState(num, option) {
         this.setState({option: option, active: num});
+        scroll.scrollTo(350);
     }
 
     render() {
@@ -38,7 +40,7 @@ class NavLinks extends Component {
         }
         return (
             <div>
-                <Navbar color="" expand="sm">
+                <Navbar id="navbar" expand="sm" className="scrollTo">
                     <Container id="workPlease">
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
@@ -56,7 +58,7 @@ class NavLinks extends Component {
                         </Collapse>
                     </Container>
                 </Navbar>
-                <Container>
+                <Container id="work">
                     {data}
                 </Container>
             </div>
