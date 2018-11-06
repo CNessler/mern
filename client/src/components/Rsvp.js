@@ -135,6 +135,8 @@ class Rsvp extends Component {
                                     <Button
                                         style={{marginTop: '2rem'}}
                                         block
+                                        color="light"
+                                        className="cheersButton"
                                     >Cheers!
                                     </Button>
                                 </FormGroup>

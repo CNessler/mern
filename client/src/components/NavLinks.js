@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Rsvp from './Rsvp';
 import Journey from './Journey';
+import Deets from './Deets';
 import {
     Collapse,
     Navbar,
@@ -37,6 +38,8 @@ class NavLinks extends Component {
             data = <Rsvp/>;
         } else if(this.state.option === "journey") {
             data = <Journey/>;
+        } else if(this.state.option === "deets") {
+            data = <Deets/>;
         }
         return (
             <div>

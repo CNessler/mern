@@ -22,6 +22,10 @@
     transition: opacity 1000ms ease-in;
 }
 
+.cheersButton.btn.btn-secondary.btn-block {
+    border: #46E34D;
+}
+
 .success {
     background: #46E34D;
     -webkit-animation: fadeinout 8s linear forwards;
