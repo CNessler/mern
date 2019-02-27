@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Rsvp from './Rsvp';
 import Journey from './Journey';
 import Deets from './Deets';
+import Airport from './Airport';
 import {
     Collapse,
     Navbar,
@@ -34,8 +34,8 @@ class NavLinks extends Component {
 
     render() {
         let data;
-        if(this.state.option === "rsvp") {
-            data = <Rsvp/>;
+        if(this.state.option === "airport") {
+            data = <Airport/>;
         } else if(this.state.option === "journey") {
             data = <Journey/>;
         } else if(this.state.option === "deets") {
@@ -55,7 +55,7 @@ class NavLinks extends Component {
                                     <Button id="nav-btn" className="btn" role="button" onClick={() =>this.changeState(2, "journey")} active={this.state.active === 2}>Our Journey</Button>
                                 </NavItem>
                                 <NavItem className="col-md-4 text-center">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "rsvp")} active={this.state.active === 3}>RSVP</Button>
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Transportation</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
