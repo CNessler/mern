@@ -58,7 +58,7 @@ class NavLinks extends Component {
                                     <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Transportation</Button>
                                 </NavItem>
                                 <NavItem className="col-md-3 text-center">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Transportation</Button>
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Registry</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>

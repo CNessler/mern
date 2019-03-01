@@ -7,8 +7,8 @@ class Airport extends React.Component {
             <Container>
             <div>
             <div class="row" id="padding-top">
-                <div class="col-sm-6 mb-3 mb-md-0">
-                    <div class="card">
+                <div class="col-md-6 mb-4">
+                    <div class="card" id="full-height">
                     <div class="card-body">
                         <h5 class="card-title">Where To Stay</h5>
                         <p class="card-text">
@@ -23,7 +23,7 @@ class Airport extends React.Component {
                     </div>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-md-6 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Airport Transportation</h5>
@@ -40,8 +40,8 @@ class Airport extends React.Component {
                     </div>
                 </div>
             </div>
-            <div class="row">
-            <div class="col-sm-6">
+            <div class="row" id="padding-bottom">
+                <div class="col-md-6 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Local Transportation</h5>
@@ -54,6 +54,21 @@ class Airport extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div class="col-md-6 mb-4">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wedding Day Transportation</h5>
+                            <p class="card-text">
+                                There are a number of cab services you can book in advance. We recommend this route. However, if you
+                                want to drive there is parking at the local club house down the road. It is about a five minute walk
+                                from there to the house. We will have signs to assist any drivers.
+                            </p>
+                            <a href="https://www.summitcove.com/taxi-services-summit-county/" class="btn btn-primary btn-sm">Summit Cove Taxi</a>
+                            <a href="http://453taxi.com/areas-we-serve/" class="btn btn-primary btn-sm">453 Taxi</a>
+                            <a href="http://www.jakesmountainshuttle.com/cant-find-a-taxi-or-uber.html" class="btn btn-primary btn-sm">Jake's Mountain Shuttle</a>
+                        </div>
+                        </div>
+                    </div>
             </div>
             </div>
             </Container>
