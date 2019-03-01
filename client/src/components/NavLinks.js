@@ -24,7 +24,7 @@ class NavLinks extends Component {
     
     constructor() {
         super();
-        this.state = {option:"", isOpen: false, activeItem: ""};
+        this.state = {option:"", isOpen: false, activeItem: "", collapsed: true};
       }
 
     changeState(num, option) {
@@ -49,7 +49,7 @@ class NavLinks extends Component {
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav navbar className="col-md-12">
                                 <NavItem className="col-md-3 text-center">
-                                    <Button id="nav-btn deets" className="btn" role="button" onClick={() =>this.changeState(1, "deets")} active={this.state.active === 1}>The Deets</Button>
+                                    <Button id="nav-btn deets" className="btn" onClick={() =>this.changeState(1, "deets")} active={this.state.active === 1}>The Deets</Button>
                                 </NavItem>
                                 <NavItem className="col-md-3 text-center">
                                     <Button id="nav-btn" className="btn" role="button" onClick={() =>this.changeState(2, "journey")} active={this.state.active === 2}>Our Journey</Button>

@@ -7,7 +7,9 @@
     width: 60%;
     opacity: 0.01;
 }
-
+.navbar-default {
+    background: #000000;
+  }
 .fade-enter-active {
     opacity: 1;
     transition: opacity 1000ms ease-in;
@@ -37,15 +39,6 @@
     font-size: 25px;
 }
 
-.otherPlans {
-    background: brown;
-    -webkit-animation: fadeinout 8s linear forwards;
-    animation: fadeinout 8s linear forwards;
-    opacity: 0;
-    color:black;
-    text-align: center;
-    border-radius: 8px;
-}
 
 @-webkit-keyframes fadeinout {
   50% { opacity: 1; }
@@ -90,7 +83,7 @@ body {
   
 div#nav {
     padding: 15px;
-    font-size: 27px;
+    font-size: 7px;
     color: #f5f1e4;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -104,6 +97,15 @@ div#nav {
     color:black;
     box-shadow: none !important;
     font-size: 25px;
+}
+
+.btn-secondary:not([disabled]):not(.disabled).active {
+    background-color: #46E34D !important;
+}
+
+.btn-secondary {
+    background-color: #46E34D !important;
+    color: #fff !important;
 }
 
   
@@ -135,6 +137,7 @@ div#nav {
   
    #nav-btn {
      font-size: 25px;
+     background-color:blue;
    }
 
    #details {
