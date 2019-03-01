@@ -142,6 +142,10 @@ div#nav {
        padding-top: 3%;
    }
 
+   .transportation-width {
+       width: 60%;
+   }
+
    #detail-title {
        padding-bottom: 1%;
    }
