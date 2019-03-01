@@ -16,9 +16,12 @@ class Airport extends React.Component {
                             We plan on spending more time in Frisco but you are free to choose wherever you would like to stay.
                             The location of the wedding is 130 Kinnikinik Rd Keystone, CO to help plan your visit.
                         </p>
+
+                            <div class="text-center">
                         <a href="https://www.airbnb.com/" class="btn btn-primary btn-sm">Airbnb</a>
                         <a href="https://www.vrbo.com/" class="btn btn-primary btn-sm">VRBO</a>
                         <a href="https://www.keystoneresort.com/" class="btn btn-primary btn-sm">Keystone Resort</a>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -63,9 +66,12 @@ class Airport extends React.Component {
                                 want to drive there is parking at the local club house down the road. It is about a five minute walk
                                 from there to the house. We will have signs to assist any drivers.
                             </p>
+
+                            <div class="text-center">
                             <a href="https://www.summitcove.com/taxi-services-summit-county/" class="btn btn-primary btn-sm">Summit Cove Taxi</a>
                             <a href="http://453taxi.com/areas-we-serve/" class="btn btn-primary btn-sm">453 Taxi</a>
                             <a href="http://www.jakesmountainshuttle.com/cant-find-a-taxi-or-uber.html" class="btn btn-primary btn-sm">Jake's Mountain Shuttle</a>
+                            </div>
                         </div>
                         </div>
                     </div>
