@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Journey from './Journey';
 import Deets from './Deets';
 import Airport from './Airport';
+import GoodToKnows from './GoodToKnows';
 import {
     Collapse,
     Navbar,
@@ -40,6 +41,8 @@ class NavLinks extends Component {
             data = <Journey/>;
         } else if(this.state.option === "deets") {
             data = <Deets/>;
+        } else if(this.state.option === "goodToKnows") {
+            data = <GoodToKnows/>;
         }
         return (
             <div>
@@ -48,17 +51,20 @@ class NavLinks extends Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav navbar className="col-md-12">
-                                <NavItem className="col-md-3 text-center">
+                                <NavItem className="text-center">
                                     <Button id="nav-btn deets" className="btn" onClick={() =>this.changeState(1, "deets")} active={this.state.active === 1}>The Deets</Button>
                                 </NavItem>
-                                <NavItem className="col-md-3 text-center">
+                                <NavItem className="text-center">
                                     <Button id="nav-btn" className="btn" role="button" onClick={() =>this.changeState(2, "journey")} active={this.state.active === 2}>Our Journey</Button>
                                 </NavItem>
-                                <NavItem className="col-md-3 text-center">
+                                <NavItem className="text-center">
                                     <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Transportation</Button>
                                 </NavItem>
-                                <NavItem className="col-md-3 text-center">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Registry</Button>
+                                <NavItem className="text-center">
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(4, "airport")} active={this.state.active === 4}>Registry</Button>
+                                </NavItem>
+                                <NavItem className="text-center">
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(5, "goodToKnows")} active={this.state.active === 5}>Good To Knows</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
