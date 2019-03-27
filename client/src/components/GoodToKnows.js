@@ -20,10 +20,13 @@ class GoodToKnows extends React.Component {
                                                 It gets pretty chilly at night so some warm gear comes recommended
                                             </li>
                                             <li>
-                                                Higher elevation = drink more water.
+                                                Higher elevation = drink more water
                                             </li>
                                             <li>
-                                                Higher elevation = drink more water.
+                                                If you are looking for a hike check out <a href="https://www.alltrails.com/">AllTrails</a>
+                                            </li>
+                                            <li>
+                                                
                                             </li>
                                         </ul>
                                     </p>

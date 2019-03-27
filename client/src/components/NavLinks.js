@@ -51,20 +51,17 @@ class NavLinks extends Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav navbar className="col-md-12">
-                                <NavItem className="text-center">
+                                <NavItem className="text-center col-md-3">
                                     <Button id="nav-btn deets" className="btn" onClick={() =>this.changeState(1, "deets")} active={this.state.active === 1}>The Deets</Button>
                                 </NavItem>
-                                <NavItem className="text-center">
+                                <NavItem className="text-center col-md-3">
                                     <Button id="nav-btn" className="btn" role="button" onClick={() =>this.changeState(2, "journey")} active={this.state.active === 2}>Our Journey</Button>
                                 </NavItem>
-                                <NavItem className="text-center">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Transportation</Button>
+                                <NavItem className="text-center col-md-3">
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Lodge/Transport</Button>
                                 </NavItem>
-                                <NavItem className="text-center">
+                                <NavItem className="text-center col-md-3">
                                     <Button id="nav-btn" className="btn" onClick={() =>this.changeState(4, "airport")} active={this.state.active === 4}>Registry</Button>
-                                </NavItem>
-                                <NavItem className="text-center">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(5, "goodToKnows")} active={this.state.active === 5}>Good To Knows</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>

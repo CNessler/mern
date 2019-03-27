@@ -33,11 +33,23 @@ class Deets extends React.Component {
                     <div class="card-body">
                         <h5 class="card-title">Saturday the 14th: Explore</h5>
                         <p class="card-text">
-                            The plan is to wake up and do a hike. TBD for location.
-                            We'll then head to the local brewery to hang out and grab food. The brewery is near the lake
-                            where you are able to rent canoes and paddleboards. There is also a playground for any kids. The
-                            brewery is kid friendly. Please not this is not a hosted event and everyone is responsible for their
-                            own tab.
+                            <ul>
+                                <li>
+                                    Hike on the Colorado Trail at 9:30AM
+                                </li>
+                                <li>
+                                    After hike beers at Highside Brewery ~12:00PM
+                                </li>
+                                <li>
+                                    Lake Dillon is across the street with a playground and/or boat rentals for those
+                                    interested
+                                </li>
+                                <li>
+                                    Walk Main St. to check out the town
+                                </li>
+                            </ul>
+                            More to come on the exact hiking trail. Also, please note this is not a hosted event
+                            and everyone is responsible for their own tab.
                         </p>
                     </div>
                     </div>
