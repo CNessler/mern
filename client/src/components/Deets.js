@@ -16,11 +16,13 @@ class Deets extends React.Component {
                                     <Col sm="2">
                                         <Row>Where: </Row>
                                         <Row>When: </Row>
+                                        <Row>Who: </Row>
                                         <Row>Attire: </Row>
                                     </Col>
-                                    <Col sm="8">
+                                    <Col sm="10">
                                         <Row>130 Kinnikinik Rd</Row>
                                         <Row>1:00PM - you can't dance no mo</Row>
+                                        <Row>Everyone! Kids are welcome at all events</Row>
                                         <Row>It will be outside so maybe ditch the heels if you want</Row>
                                     </Col>
                                 </Row>
@@ -62,7 +64,7 @@ class Deets extends React.Component {
                         <h5 class="card-title">Sunday the 15th: Chill</h5>
                         <p class="card-text">
                             We will be hanging out at the house. Come over, grab some food, relax in the hot tub,
-                            drink some drinks. We are going to relax and visit. The more the merrier.
+                            drink some drinks. This is all about R&R with friends and family. The more the merrier.
                         </p>
                     </div>
                     </div>

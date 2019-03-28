@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Journey from './Journey';
 import Deets from './Deets';
 import Airport from './Airport';
-import GoodToKnows from './GoodToKnows';
+import Registry from './Registry';
 import {
     Collapse,
     Navbar,
@@ -41,8 +41,8 @@ class NavLinks extends Component {
             data = <Journey/>;
         } else if(this.state.option === "deets") {
             data = <Deets/>;
-        } else if(this.state.option === "goodToKnows") {
-            data = <GoodToKnows/>;
+        } else if(this.state.option === "registry") {
+            data = <Registry/>;
         }
         return (
             <div>
@@ -61,7 +61,7 @@ class NavLinks extends Component {
                                     <Button id="nav-btn" className="btn" onClick={() =>this.changeState(3, "airport")} active={this.state.active === 3}>Lodge/Transport</Button>
                                 </NavItem>
                                 <NavItem className="text-center col-md-3">
-                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(4, "airport")} active={this.state.active === 4}>Registry</Button>
+                                    <Button id="nav-btn" className="btn" onClick={() =>this.changeState(4, "registry")} active={this.state.active === 4}>Registry</Button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
