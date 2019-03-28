@@ -9,7 +9,6 @@ import bryce from "../images/bryce.png";
 import camino from "../images/camino.jpg";
 import campglow from "../images/campglow.JPG";
 import cinco from "../images/cinco.png";
-import costaricabest from "../images/costaricabest.JPG";
 import grad from "../images/grad.JPG";
 import guy from "../images/guy.png";
 import hike from "../images/hike.png";
