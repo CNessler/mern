@@ -7,7 +7,6 @@ import backpack from "../images/backpack.JPG";
 import boxing from "../images/boxing.JPG";
 import bryce from "../images/bryce.png";
 import camino from "../images/camino.jpg";
-import caminodos from "../images/camino2.jpg";
 import campglow from "../images/campglow.JPG";
 import cinco from "../images/cinco.png";
 import costaricabest from "../images/costaricabest.JPG";
