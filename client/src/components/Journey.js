@@ -19,7 +19,6 @@ import pride2 from "../images/pride2.png";
 import sleeping from "../images/sleeping.JPG";
 import moab from "../images/moab.jpg";
 import nyc from "../images/nyc.png";
-import spain from "../images/spain.png";
 import telluride2 from "../images/telluride2.jpg";
 import waterfall from "../images/waterfall.JPG";
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
