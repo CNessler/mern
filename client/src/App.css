@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Give+You+Glory|Montez|Nanum+Brush+Script|Nothing+You+Could+Do');
+@import url('https://fonts.googleapis.com/css?family=Give+You+Glory|Montez|Nothing+You+Could+Do');
 @import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
+@import url('https://fonts.googleapis.com/css?family=Aladin|Courgette|Kaushan+Script|Merienda|Tillana');
 
 
 .btn-secondary {
-    background-color: #ebf2ea !important;
-    color: #449639 !important;
-    font: 10px "Delius Swash Caps";
+    background-color: #225560!important;
+    color: #E98A15!important;
+    font: 10px "Kaushan Script";
+}
+
+
+body {
+   background-color: #FFF7F8;
 }
 
 .remove-btm {
@@ -42,9 +48,6 @@
   50% { opacity: 1; }
 }
 
-body {
-   background-color: #ebf2ea;
-}
 
 .jumbotron {
     margin-bottom: 0;
@@ -120,10 +123,6 @@ div#nav {
 }
 
 
-.btn-secondary {
-    background-color: white;
-    font-size: 18px;
-}
 
 
    #details {
