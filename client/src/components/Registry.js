@@ -14,7 +14,7 @@ class Registry extends React.Component {
                                     <p class="card-text">
                                         <p>Please know your presence is our most invaluable gift. Seeing the ones we love 
                                             matters most and creating new memories with you will last forever. If you would like,
-                                            or have the means these are some items/experiences we could use help with.
+                                            or have the means these are some items/experiences we would like.
                                         </p>
                                         <div class="text-center">
                                             <a href='https://www.paypal.com/pools/c/8dofBxsI8u'class="btn btn-primary btn-sm">Honeymoon fund</a>

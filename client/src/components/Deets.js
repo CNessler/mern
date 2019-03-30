@@ -17,7 +17,7 @@ class Deets extends React.Component {
                                         <Row><b>Where:</b> 130 Kinnikinik Rd</Row>
                                         <Row><b>When:</b> 1:00PM - you can't dance no mo</Row>
                                         <Row><b>Who:</b> Everyone! Kids are welcome at all events</Row>
-                                        <Row><b>Attire:</b> It will be outside so maybe ditch the heels if you want</Row>
+                                        <Row><b>Attire:</b> Mostly outside so chic but practical</Row>
                                     </Col>
                                 </Row>
                             </p>
