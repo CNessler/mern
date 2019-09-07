@@ -41,7 +41,7 @@ class Deets extends React.Component {
                                 </li>
                                 <li>
                                     After hike beers at <a href="https://www.google.com/maps/place/HighSide+Brewing/@39.5763608,-106.0928118,15z/data=!4m5!3m4!1s0x0:0xd8548ba4397f4cbf!8m2!3d39.5763608!4d-106.0928118" target="_blank"
-                                                >Highside Brewery </a>  1:30PM
+                                                >Highside Brewery </a>  1:00PM
                                 </li>
                                 <li>
                                     Lake Dillon is across the street with a playground and/or boat rentals for those
